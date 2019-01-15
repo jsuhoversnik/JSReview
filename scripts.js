@@ -18,3 +18,15 @@ function fizzBuzz(){
         console.log(result);
     }
 }
+
+//take a string argument and count the number of B's used
+function countBs(input){
+    let count = 0;
+    for(var i =0; i < input.length; i++){
+        if(input.charAt(i) == "B"){
+            count++;
+        }
+    }
+    //console.log(count);
+    return count;
+}
