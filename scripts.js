@@ -1,5 +1,15 @@
 console.log("Introduction to Javascript");
 
+document.getElementById("count").onclick = function(){
+    let input = document.getElementById("input").value;
+    console.log("Number of B's: " + countBs(input));
+}
+document.getElementById("count2").onclick = function(){
+    let char = document.getElementById("letter").value;
+    let word = document.getElementById("word").value;
+    console.log("Number of " + char + "'s: " + countChar(word,char));
+}
+
 function fizzBuzz(){
 
     for(var i = 1; i <=100; i++){
@@ -21,13 +31,7 @@ function fizzBuzz(){
 
 //take a string argument and count the number of B's used
 function countBs(input){
-    let count = 0;
-    for(var i =0; i < input.length; i++){
-        if(input.charAt(i) === "B"){
-            count++;
-        }
-    }
-    return count;
+    return countChar(input, "B");
 }
 
 function countChar(haystack, needle){
