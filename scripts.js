@@ -23,10 +23,19 @@ function fizzBuzz(){
 function countBs(input){
     let count = 0;
     for(var i =0; i < input.length; i++){
-        if(input.charAt(i) == "B"){
+        if(input.charAt(i) === "B"){
             count++;
         }
     }
-    //console.log(count);
+    return count;
+}
+
+function countChar(haystack, needle){
+    let count = 0;
+    for(var i =0; i < haystack.length; i++){
+        if(haystack.charAt(i) === needle){
+            count++;
+        }
+    }
     return count;
 }
